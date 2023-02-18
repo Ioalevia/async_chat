@@ -1,0 +1,11 @@
+pc:
+- intel
+- amd
+- mac
+- raspberry
+pc_quantity: 4
+pc_price:
+  intel: 1000$
+  amd: 900$
+  mac: 1500$
+  raspberry: 100€

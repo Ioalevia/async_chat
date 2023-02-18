@@ -1,0 +1,25 @@
+{
+    "orders": [
+        {
+            "item": "mac",
+            "quantity": "100",
+            "price": "100",
+            "buyer": "Mike",
+            "date": "12.12.2012"
+        },
+        {
+            "item": "intel",
+            "quantity": "150",
+            "price": "1000",
+            "buyer": "Emma",
+            "date": "11.11.2011"
+        },
+        {
+            "item": "amd",
+            "quantity": "200",
+            "price": "900",
+            "buyer": "Hill",
+            "date": "10.108.2010"
+        }
+    ]
+}

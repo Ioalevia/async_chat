@@ -2,6 +2,8 @@
 программирование», «сокет», «декоратор». Проверить кодировку файла по умолчанию.
 Принудительно открыть файл в формате Unicode и вывести его содержимое."""
 
+from chardet import detect
+
 words = ['сетевое программирование', 'сокет', 'декоратор']
 
 with open('test_file.txt', 'w') as file:
@@ -9,12 +11,14 @@ with open('test_file.txt', 'w') as file:
         file.write(f'{word}\n')
 file.close()
 
-with open('test_file.txt', 'r') as file:
-    print(f'кодировка 6.txt: {file.encoding}\n')
+with open('test_file.txt', 'rb') as file:
+    content = file.read()
+encoding = detect(content)['encoding']
+print(f'кодировка 6.txt: {encoding}\n')
 file.close()
 
-with open('test_file.txt', 'r', encoding='utf-8') as file:
+with open('test_file.txt', 'r', encoding=encoding) as file:
     print('Cодержимое:')
-    for word in words:
-        print(word)
+    content = file.read()
+    print(content)
 file.close()
