@@ -3,11 +3,13 @@ import sys
 import json
 import logging
 import log.config.server_log_config
+from decor import Log
 
 
 S_LOGGER = logging.getLogger('server')
 
 
+@Log()
 def get_msg(tr_socket):
     S_LOGGER.debug(f'Попытка получения сообщения: {tr_socket}')
     encoded_resp = tr_socket.recv(1024)
@@ -23,6 +25,7 @@ def get_msg(tr_socket):
     raise ValueError
 
 
+@Log()
 def make_answer(answerclient: dict):
     S_LOGGER.debug(f'Проверка сообщения от клиента: {answerclient}')
     if "action" in answerclient and answerclient["action"] == "presence" and "time" in answerclient \
@@ -34,6 +37,7 @@ def make_answer(answerclient: dict):
     }
 
 
+@Log()
 def send_msg(tr_socket, msgtoclient):
     S_LOGGER.debug(f'Отправка сообщения {msgtoclient} клиенту {tr_socket}')
     js_msg = json.dumps(msgtoclient)

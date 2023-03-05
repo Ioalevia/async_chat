@@ -1,0 +1,9 @@
+2023-03-05 14:50:00,322 INFO server.py Сервер запущен. порт: 7777
+2023-03-05 14:50:08,984 INFO server.py соединение установлено c ('127.0.0.1', 50771)
+2023-03-05 14:50:08,984 DEBUG server.py Попытка получения сообщения: <socket.socket fd=368, family=2, type=1, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 50771)>
+2023-03-05 14:50:08,984 INFO server.py Принято сообщение клиента {'action': 'presence', 'time': 1678017008.9843142, 'user': {'account_name': 'user'}}
+2023-03-05 14:50:08,984 DEBUG server.py Получено сообщение {'action': 'presence', 'time': 1678017008.9843142, 'user': {'account_name': 'user'}}
+2023-03-05 14:50:08,984 DEBUG server.py Проверка сообщения от клиента: {'action': 'presence', 'time': 1678017008.9843142, 'user': {'account_name': 'user'}}
+2023-03-05 14:50:08,984 INFO server.py Сформирован ответ {'response': 200}
+2023-03-05 14:50:08,984 DEBUG server.py Отправка сообщения {'response': 200} клиенту <socket.socket fd=368, family=2, type=1, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 50771)>
+2023-03-05 14:50:08,984 DEBUG server.py Соединение с клиентом ('127.0.0.1', 50771) закрывается
