@@ -13,3 +13,17 @@ DEBUG | 2023-03-08 19:07:50,024 | server.py | Received message: {'action': 'pres
 INFO | 2023-03-08 19:07:50,024 | server.py | Server response OK
 DEBUG | 2023-03-08 19:07:50,024 | server.py | Called function client_message_handler with params ((<__main__.Server object at 0x00000155ECB043D0>, {'action': 'presence', 'time': 1678291669.814883, 'user': {'account_name': 'Guest'}}, [], <socket.socket fd=404, family=2, type=1, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 51883)>), {}). From module __main__. From function server.main(). 
 ERROR | 2023-03-08 19:08:00,312 | server.py | Client ('127.0.0.1', 51883) disconnected
+INFO | 2023-03-08 19:09:26,799 | server.py | Client ('127.0.0.1', 51888) connected
+DEBUG | 2023-03-08 19:09:27,005 | server.py | Received message: {'action': 'presence', 'time': 1678291766.7997677, 'user': {'account_name': 'Guest'}}
+INFO | 2023-03-08 19:09:27,005 | server.py | Server response OK
+DEBUG | 2023-03-08 19:09:27,005 | server.py | Called function client_message_handler with params ((<__main__.Server object at 0x00000155ECB043D0>, {'action': 'presence', 'time': 1678291766.7997677, 'user': {'account_name': 'Guest'}}, [], <socket.socket fd=388, family=2, type=1, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 51888)>), {}). From module __main__. From function server.main(). 
+DEBUG | 2023-03-08 19:09:30,711 | server.py | Received message: {'action': 'msg', 'time': 1678291770.6650383, 'account_name': 'Guest', 'msg txt': 'wer'}
+DEBUG | 2023-03-08 19:09:30,711 | server.py | Called function client_message_handler with params ((<__main__.Server object at 0x00000155ECB043D0>, {'action': 'msg', 'time': 1678291770.6650383, 'account_name': 'Guest', 'msg txt': 'wer'}, [('Guest', 'wer')], <socket.socket fd=388, family=2, type=1, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 51888)>), {}). From module __main__. From function server.main(). 
+INFO | 2023-03-08 19:09:43,640 | server.py | Client ('127.0.0.1', 51889) connected
+DEBUG | 2023-03-08 19:09:43,844 | server.py | Received message: {'action': 'presence', 'time': 1678291783.6408813, 'user': {'account_name': 'Guest'}}
+INFO | 2023-03-08 19:09:43,844 | server.py | Server response OK
+DEBUG | 2023-03-08 19:09:43,844 | server.py | Called function client_message_handler with params ((<__main__.Server object at 0x00000155ECB043D0>, {'action': 'presence', 'time': 1678291783.6408813, 'user': {'account_name': 'Guest'}}, [], <socket.socket fd=396, family=2, type=1, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 51889)>), {}). From module __main__. From function server.main(). 
+DEBUG | 2023-03-08 19:09:47,777 | server.py | Received message: {'action': 'msg', 'time': 1678291787.580658, 'account_name': 'Guest', 'msg txt': '23'}
+DEBUG | 2023-03-08 19:09:47,777 | server.py | Called function client_message_handler with params ((<__main__.Server object at 0x00000155ECB043D0>, {'action': 'msg', 'time': 1678291787.580658, 'account_name': 'Guest', 'msg txt': '23'}, [('Guest', '23')], <socket.socket fd=388, family=2, type=1, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 51888)>), {}). From module __main__. From function server.main(). 
+ERROR | 2023-03-08 19:09:54,586 | server.py | Client ('127.0.0.1', 51889) disconnected
+ERROR | 2023-03-08 19:09:56,659 | server.py | Client ('127.0.0.1', 51888) disconnected
