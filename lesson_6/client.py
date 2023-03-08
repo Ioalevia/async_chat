@@ -4,10 +4,13 @@ import socket
 import time
 import logging
 import log.config.client_log_config
+from decor import Log
+
 
 C_LOGGER = logging.getLogger('client')
 
 
+@Log()
 def presence(user):
     output = {
         "action": "presence",
@@ -18,6 +21,7 @@ def presence(user):
     return output
 
 
+@Log()
 def send_message(host, port):
     C_LOGGER.debug(f'Отправкеа сообщения: сервер {host}, порт {port}')
     s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
@@ -29,6 +33,7 @@ def send_message(host, port):
     return s
 
 
+@Log()
 def get_message(socketsession):
     C_LOGGER.debug(f'Попытка получения сообщения {socketsession}')
     encoded_resp = socketsession.recv(1024)
@@ -44,6 +49,7 @@ def get_message(socketsession):
     raise ValueError
 
 
+@Log()
 def get_answer(answer):
     C_LOGGER.debug(f'Обработка ответа сервера {answer}')
     if "response" in answer:

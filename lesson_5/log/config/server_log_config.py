@@ -8,7 +8,7 @@ format_msg = logging.Formatter('%(asctime)s %(levelname)s %(filename)s %(message
 
 
 PATH = os.path.dirname(os.path.abspath(__file__))
-PATH = os.path.join(PATH, 'server.log')
+PATH = os.path.join(PATH, '../log/server.log')
 
 
 handler_log = logging.StreamHandler(sys.stderr)
