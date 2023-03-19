@@ -1,0 +1,15 @@
+2023-03-19 17:01:50,343 DEBUG decors.py Была вызвана функция arg_parser c параметрами () , {}. Вызов из модуля __main__
+2023-03-19 17:01:52,445 INFO client.py Запущен клиент с парамертами: адрес сервера: 127.0.0.1 , порт: 7777, имя пользователя: asd
+2023-03-19 17:01:52,446 DEBUG decors.py Была вызвана функция create_presence c параметрами ('asd',) , {}. Вызов из модуля __main__
+2023-03-19 17:01:52,446 DEBUG client.py Сформировано presence сообщение для пользователя asd
+2023-03-19 17:01:52,446 DEBUG decors.py Была вызвана функция send_message c параметрами (<socket.socket fd=424, family=2, type=1, proto=0, laddr=('127.0.0.1', 51269), raddr=('127.0.0.1', 7777)>, {'action': 'presence', 'time': 1679234512.446808, 'user': {'account_name': 'asd'}}) , {}. Вызов из модуля common.utils
+2023-03-19 17:01:52,447 DEBUG decors.py Была вызвана функция get_message c параметрами (<socket.socket fd=424, family=2, type=1, proto=0, laddr=('127.0.0.1', 51269), raddr=('127.0.0.1', 7777)>,) , {}. Вызов из модуля common.utils
+2023-03-19 17:01:52,448 DEBUG decors.py Была вызвана функция process_response_ans c параметрами ({'response': 200},) , {}. Вызов из модуля __main__
+2023-03-19 17:01:52,448 DEBUG client.py Разбор приветственного сообщения от сервера: {'response': 200}
+2023-03-19 17:01:52,448 INFO client.py Установлено соединение с сервером. Ответ сервера: 200 : OK
+2023-03-19 17:01:52,449 DEBUG decors.py Была вызвана функция get_message c параметрами (<socket.socket fd=424, family=2, type=1, proto=0, laddr=('127.0.0.1', 51269), raddr=('127.0.0.1', 7777)>,) , {}. Вызов из модуля common.utils
+2023-03-19 17:01:52,450 DEBUG client.py Запущены процессы
+2023-03-19 17:02:00,236 DEBUG client.py Сформирован словарь сообщения: {'action': 'message', 'from': 'asd', 'to': '1', 'time': 1679234520.2367492, 'mess_text': '111'}
+2023-03-19 17:02:00,236 DEBUG decors.py Была вызвана функция send_message c параметрами (<socket.socket fd=424, family=2, type=1, proto=0, laddr=('127.0.0.1', 51269), raddr=('127.0.0.1', 7777)>, {'action': 'message', 'from': 'asd', 'to': '1', 'time': 1679234520.2367492, 'mess_text': '111'}) , {}. Вызов из модуля common.utils
+2023-03-19 17:02:00,236 INFO client.py Отправлено сообщение для пользователя 1
+2023-03-19 17:02:16,302 CRITICAL client.py Потеряно соединение с сервером.
