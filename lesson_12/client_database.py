@@ -2,6 +2,7 @@ from sqlalchemy import create_engine, Table, Column, Integer, String, Text, Meta
 from sqlalchemy.orm import mapper, sessionmaker
 from common.variables import *
 import datetime
+from sqlalchemy.orm import registry
 
 
 # Класс - база данных сервера.
@@ -63,9 +64,10 @@ class ClientDatabase:
         self.metadata.create_all(self.database_engine)
 
         # Создаём отображения
-        mapper(self.KnownUsers, users)
-        mapper(self.MessageHistory, history)
-        mapper(self.Contacts, contacts)
+        mapper_reg = registry()
+        mapper_reg.map_imperatively(self.KnownUsers, users)
+        mapper_reg.map_imperatively(self.MessageHistory, history)
+        mapper_reg.map_imperatively(self.Contacts, contacts)
 
         # Создаём сессию
         Session = sessionmaker(bind=self.database_engine)
